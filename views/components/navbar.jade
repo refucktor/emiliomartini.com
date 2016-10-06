@@ -1,0 +1,30 @@
+link(rel='stylesheet' href='/stylesheets/components/navbar.css')
+nav.z-depth-0
+	div.nav-wrapper
+		a(class="button-collapse hide-on-med-and-up" href="#" data-activates="sideNav")
+			i(class="material-icons") menu
+		ul.hide-on-small-only.centered-nav
+			li
+				a(href='/home') home
+			li
+				a(href='/logout') discography
+			li
+				a(href='/logout') events
+			li
+				a(href='/logout') gallery
+			li
+				a(href='/logout') contact us
+		ul(class='side-nav' id='sideNav')
+			li
+				a(href='/home') home
+			li
+				a(href='/logout') discography
+			li
+				a(href='/logout') events
+			li
+				a(href='/logout') gallery
+			li
+				a(href='/logout') contact us
+
+script.
+	$(".button-collapse").sideNav();
