@@ -1,8 +1,278 @@
+/***** Global Styles ********************************************************/
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+}
+.center-cropped{
+	object-fit: cover;
+	object-position: top center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
-a {
-  color: #00B7FF;
+.panel-title {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	color: white;
 }
+.full-panel{
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+.full-panel > *:not(.dimmer),
+.full-panel > *:not(.center-cropped),
+.full-panel *:not(.navbar){
+	z-index: 10;
+}
+.full-carousel{
+	height: 80%!important;
+	position: relative!important;
+	top: 20%!important;
+}
+.dimmer{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: rgba(10,10,10,.5);
+	z-index: 10;
+}
+/***** Header ********************************************************/
+.brand-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+	color: white;
+}
+.about-me-link{
+	position: absolute;
+	bottom: 2em;
+	right: 1em;
+	font-size: 1.3em;
+}
+.about-me-link:hover{
+	background: none;
+}
+
+/***** About Me ********************************************************/
+.about-me-panel{
+	position: absolute;
+	z-index: 1000;
+	display: block;
+}
+.about-me-panel.hided{
+	display: none;
+	left: 100%;
+}
+.about-me-panel.hiding{
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-name: fade-right-out;
+	left: 100%;
+}
+.about-me-panel.visible{
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-name: fade-left-in;
+}
+.go-home-link{
+	position: absolute;
+	bottom: 2em;
+	left: 1em;
+}
+.go-home-link > i.material-icons{
+	font-size: 3em;
+}
+.about-me-content{
+	position: absolute;
+	top: 30%;
+	color: white;
+}
+.about-me-content .firstContent{
+	margin-bottom: 20px;
+}
+.about-me-content h6{
+	line-height: 21px;
+}
+@media (max-width: 768px){
+	.about-me-content{
+		left: 10%;
+		max-width: 80%;
+	}
+	.full-carousel{
+		height: 90%!important;
+		position: relative!important;
+		top: 10%!important;
+	}
+}
+@media (min-width: 769px) and (max-width: 992px){
+	.about-me-content{
+		left: 20%;
+		max-width: 70%;
+		font-size: 1.5rem;
+	}
+}
+@media only screen and (min-width: 993px){
+	.about-me-content{
+		left: 50%;
+		max-width: 35%;
+		font-size: 1.5rem;
+	}
+}
+
+/***** Discoraphy ********************************************************/
+#discography .carousel-item > .centered{
+	height: 75%;
+	top:12.5%;
+	position: relative;
+}
+.discography-track{
+	width: 70%;
+	margin-bottom: 2em;
+}
+
+.discography-image{
+	object-fit: cover;
+	max-height: 100%;
+}
+
+/***** Events ********************************************************/
+#events.full-panel{
+	background: rgb(5,5,5);
+}
+.events-content {
+	height: 400px;
+}
+
+/***** Gallery ********************************************************/
+#gallery .carousel-item > .centered{
+	height: 85%;
+	top: 7.5%;
+	position: relative;
+}
+#gallery .carousel-item{
+	padding: 0 15%;
+}
+.gallery-img{
+	float: left;
+	padding: 5px;
+	z-index: inherit;
+}
+.gallery-img > *,
+.gallery-img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center center;
+}
+@media (max-width: 992px){
+	.gallery-img{
+		height: 50%!important;
+		width: 50%!important;
+	}
+}
+@media only screen and (min-width: 993px){
+	.gallery-img:nth-child(1){
+		height: 100%!important;
+		width: 50%!important;
+	}
+	.gallery-img:nth-child(2){
+		height: 50%!important;
+		width: 50%!important;
+	}
+	.gallery-img:nth-child(3),
+	.gallery-img:nth-child(4){
+		height: 50%!important;
+		width: 25%!important;
+	}
+}
+
+/***** Contact Us ********************************************************/
+.contact-panel{
+	width: 100%;
+	height: 80%;
+	top: 20%;
+	position: relative;
+}
+.contact-form{
+	position: relative;
+	height: 70%;
+	top: 15%;
+	background: rgba(0,0,0,.6);
+	padding: 1em;
+}
+.contact-form input{
+	color: rgba(255,255,255,.8)!important;
+}
+.contact-form input:focus{
+	border-bottom: 1px solid #4d5ba6!important;
+	box-shadow: 0 1px 0 0 #4d5ba6!important;
+}
+.contact-submit{
+	text-align: center;
+	width: 50%;
+	position: relative;
+	left: 25%;
+	border-radius: 10px;
+	cursor: pointer;
+	background-color: rgb(255, 153, 0);
+	border: 1px solid rgba(0,0,0,.4);
+	color: white;
+	padding: 5px;
+}
+
+.contact-form textarea{
+	resize: none;
+	color: white;
+	height: 190px;
+	padding: 5px 10px;
+}
+@media (max-width: 992px){
+	.contact-form{
+		width: 80%;
+		left: 10%;
+	}
+	.contact-form textarea{
+		height: 100px;
+	}
+}
+@media only screen and (min-width: 993px){
+	.contact-form{
+		width: 70%;
+		left: 15%;
+	}
+}
+
+/***** Slide Indicator ********************************************************/
+.slide-indicator{
+	display: none;
+}
+.slide-indicator.visible{
+	position: fixed;
+	right: 20px;
+	top: 50%;
+	z-index: 1000;
+	display: initial;
+}
+.slide-indicator i.material-icons{
+	font-size: .95rem!important;
+}
+/***** Animations ********************************************************/
+@-webkit-keyframes fade-left-in { from { left: 100%; } to { left: 0; }}
+@-moz-keyframes fade-left-in { from { left: 100%; } to { left: 0; }}
+@-o-keyframes fade-left-in { from { left: 100%; } to { left: 0; }}
+@keyframes fade-left-in { from { left: 100%; } to { left: 0; }}
+
+@-webkit-keyframes fade-right-out { from { left: 0; } to { left: 100%; }}
+@-moz-keyframes fade-right-out { from { left: 0; } to { left: 100%; }}
+@-o-keyframes fade-right-out { from { left: 0; } to { left: 100%; }}
+@keyframes fade-right-out { from { left: 0; } to { left: 100%; }}

@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	main
+		include components/about_me
+		include components/header
+		include components/discography
+		include components/events
+		include components/gallery
+		include components/contact_us
+		include components/slide_indicator
+	script(src='/javascripts/main.js')

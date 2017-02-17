@@ -1,0 +1,19 @@
+div#contact_us.scrollspy.full-panel
+	img(src='/images/contact.jpg' class='center-cropped')
+	div.dimmer
+	div.row.panel-title
+		h5.center-aligned Contact Us
+	div.row.contact-panel
+		form.contact-form
+			div.row
+				div.input-field.col.s12.m6
+					input(type="text" id='name' class='validate' required='required')
+					label(for='name') Name
+				div.input-field.col.s12.m6
+					input(type="email" id='email' class='validate' required='required')
+					label(for='email') Email
+				div.input-field.col.s12
+					textarea(placeholder="Message")
+			button(class="contact-submit" type="submit" name="action") Submit
+
+
