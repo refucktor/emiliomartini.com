@@ -8,9 +8,9 @@ router.get('/', function (req, res, next) {
     res.render('index', {title: 'Emilio Martini'});
 });
 
-router.get('/sendEmail', function (req, res, next) {
+router.post('/sendEmail', function (req, res, next) {
     try{
-        console.ingo(req.body.message);
+        console.info(req.body);
         let email = process.env.EMAIL;
         let passw = process.env.EMAIL_PASSWORD;
         let emailReceiver = process.env.EMAIL_RECEIVER;
@@ -24,7 +24,7 @@ router.get('/sendEmail', function (req, res, next) {
 
         let mailOptions = {
             from: '"'+ req.body.name + '" <' + req.body.email + '>',
-            to: emailReceiver,
+            to: 'emartini.contact@gmail.com',
             subject: 'Martini Web Page message',
             text: req.body.message,
             html: '<h2><b>From Martini Web Page</b></h2><p>'+ req.body.message+'</p>'
