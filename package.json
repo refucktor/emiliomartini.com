@@ -20,5 +20,6 @@
     "pug": "~2.0.0-beta10",
     "serve-favicon": "^2.3.0",
     "stylus": "0.54.5"
-  }
+  },
+  "cacheDirectories": ["node_modules/"]
 }
