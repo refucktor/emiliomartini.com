@@ -27,7 +27,7 @@ router.post('/sendEmail', function (req, res, next) {
             to: 'emartini.contact@gmail.com',
             subject: 'Martini Web Page message',
             text: req.body.message,
-            html: '<h2><b>From Martini Web Page</b></h2><p>'+ req.body.message+'</p>'
+            html: '<h2><b>From Martini Web Page</b></h2><h3>Name: '+ req.body.name+', Email: '+ req.body.email +'</h3><p>'+ req.body.message+'</p>'
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
