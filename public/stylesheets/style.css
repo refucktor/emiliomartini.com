@@ -19,15 +19,15 @@ h3 {
 }
 
 h4 {
-    font-size: 3.1rem !important;
+    font-size: 3.1rem;
 }
 
 h5 {
-    font-size: 2.8rem !important;
+    font-size: 2.8rem;
 }
 
 h6 {
-    font-size: 1.8rem !important;
+    font-size: 1.8rem;
 }
 
 .inline-content > * {
@@ -161,13 +161,16 @@ h6 {
 
 .about-me-content h6 {
     line-height: 30px;
-    font-size: 20px !important;
 }
 
 @media (max-width: 768px) {
     .about-me-content {
         left: 10%;
         max-width: 80%;
+    }
+
+    .about-me-content h6 {
+        font-size: 1.2rem;
     }
 
     .full-carousel {
@@ -181,15 +184,19 @@ h6 {
     .about-me-content {
         left: 20%;
         max-width: 70%;
-        font-size: 1.5rem;
+    }
+    .about-me-content h6 {
+        font-size: 1.2rem;
     }
 }
 
 @media only screen and (min-width: 993px) {
     .about-me-content {
         left: 50%;
-        max-width: 40%;
-        font-size: 1.5rem;
+        max-width: 45%;
+    }
+    .about-me-content h6 {
+        font-size: 1.3rem;
     }
 }
 
