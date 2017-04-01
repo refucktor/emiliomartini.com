@@ -1,0 +1,41 @@
+div#discography.scrollspy.full-panel
+	img(src='/images/pages/discography_bg_small.jpg' class='center-cropped')
+	div.dimmer
+	div.row.panel-title
+		h5.center-aligned My Discography
+	div(class='full-carousel carousel carousel-slider center' data-indicators="true")
+		div.carousel-item.center.row
+			div.col.s12.m6.centered
+				div.players-container
+					div.audio-player-container
+						h1 Chapa Negra
+						img(class="cover" src="/images/discs/chapa_negra.jpg" alt="")
+						audio(class="audio-player" src="/sounds/chapa_negra/chapa_negra.mp3" type="audio/mp3" controls="controls")
+					div.audio-player-container
+						h1 Hanami
+						img(class="cover" src="/images/discs/chapa_negra.jpg" alt="")
+						audio(class="audio-player" src="/sounds/chapa_negra/hanami.mp3" type="audio/mp3" controls="controls")
+					div.audio-player-container
+						h1 Olimpiada de la mentira
+						img(class="cover" src="/images/discs/chapa_negra.jpg" alt="")
+						audio(class="audio-player" src="/sounds/chapa_negra/olimpiada_de_la_mentira.mp3" type="audio/mp3" controls="controls")
+			div.col.m5.hide-on-small-and-medium.centered
+				img(class='responsive-img discography-image' src='/images/discs/chapa_negra.jpg')
+		div.carousel-item.center.row
+			div.col.s12.m6.centered
+				div.players-container
+					div.audio-player-container
+						h1 Notas al viento
+						img(class="cover" src="/images/discs/notas.jpg" alt="")
+						audio(class="audio-player" src="/sounds/notas_al_viento/la_familia.mp3" type="audio/mp3" controls="controls")
+					div.audio-player-container
+						h1 Mambo Spagueti
+						img(class="cover" src="/images/discs/notas.jpg" alt="")
+						audio(class="audio-player" src="/sounds/notas_al_viento/mambo_spagueti.mp3" type="audio/mp3" controls="controls")
+					div.audio-player-container
+						h1 Mimi
+						img(class="cover" src="/images/discs/notas.jpg" alt="")
+						audio(class="audio-player" src="/sounds/notas_al_viento/mimi.mp3" type="audio/mp3" controls="controls")
+			div.col.m5.hide-on-small-only.centered
+				img(class='responsive-img discography-image' src='/images/discs/notas.jpg')
+	link(rel='stylesheet' href='/stylesheets/components/audio-player.css')

@@ -13,6 +13,13 @@ function initializeComponents() {
 	$('.scrollspy').scrollSpy({scrollOffset: 0});
 	$('.full-carousel.carousel').carousel({full_width: true});
 	$('.events-content.carousel').carousel({full_width: true});
+    $('.audio-player').mediaelementplayer({
+        alwaysShowControls: true,
+        features: ['playpause','volume','progress'],
+        audioVolume: 'horizontal',
+        audioWidth: 400,
+        audioHeight: 120
+    });
 }
 
 /**
