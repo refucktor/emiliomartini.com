@@ -14,8 +14,8 @@
 }
 
 .centered-nav li a{
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: rgb(230,230,230)
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: rgb(230,230,230);
+    text-transform: uppercase;
 }
