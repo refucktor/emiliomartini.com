@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {title: 'Emilio Martini'});
 });
 
-router.post('/sendEmail', function (req, res, next) {
+router.get('/sendEmail', function (req, res, next) {
     try{
         let email = process.env.EMAIL;
         let passw = process.env.EMAIL_PASSWORD;
@@ -42,6 +42,7 @@ router.post('/sendEmail', function (req, res, next) {
     }
     res.writeHead(200, { 'Content-Type': 'text/javascript' });
     res.end({message: "Your message has been send"});
+    res.render('index', {title: 'Emilio Martini'});
 });
 
 module.exports = router;
