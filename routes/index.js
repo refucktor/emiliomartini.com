@@ -40,8 +40,6 @@ router.get('/sendEmail', function (req, res, next) {
         console.error(ex);
         res.end({message: "Your message was not sent"});
     }
-    res.writeHead(200, { 'Content-Type': 'text/javascript' });
-    res.end({message: "Your message has been send"});
     res.render('index', {title: 'Emilio Martini'});
 });
 
