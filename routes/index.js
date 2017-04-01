@@ -10,6 +10,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/sendEmail', function (req, res, next) {
     try{
+        console.ingo(req.body.message);
         let email = process.env.EMAIL;
         let passw = process.env.EMAIL_PASSWORD;
         let emailReceiver = process.env.EMAIL_RECEIVER;
