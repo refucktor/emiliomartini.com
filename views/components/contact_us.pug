@@ -1,6 +1,6 @@
 div#contact_us.scrollspy.full-panel
 	img(src='/images/pages/contact_bg_small.jpg' class='center-cropped')
-	div.dimmer
+	//div.dimmer
 	div.row.panel-title
 		h5.center-aligned Contact Us
 	div.row.contact-panel
@@ -15,5 +15,14 @@ div#contact_us.scrollspy.full-panel
 				div.input-field.col.s12
 					textarea(placeholder="Message" name='message' id='message' required='required')
 			button(class="contact-submit" type="submit" name="action") Send
+	div.social-icons-container
+		a(class="social-icons" href="https://www.facebook.com/emiliomartini.cubaguitar" target='_blank')
+			img(src="/images/assets/facebook.svg")
+		a(class="social-icons" href="https://www.instagram.com/emiliomartini.guitar/" target='_blank')
+			img(src="/images/assets/instagram.svg")
+		a(class="social-icons" href="https://www.youtube.com/user/reycubass" target='_blank')
+			img(src="/images/assets/youtube.svg")
+	a(class="waves-effect waves-light btn-flat go-home-btn hide-on-small-only" href='#header')
+		i.material-icons.medium home
 
 

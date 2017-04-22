@@ -1,6 +1,6 @@
 div#discography.scrollspy.full-panel
 	img(src='/images/pages/discography_bg_small.jpg' class='center-cropped bluring')
-	div.dimmer
+	//div.dimmer
 	div.row.panel-title
 		h5.center-aligned My Discography
 	div(class='full-carousel carousel carousel-slider center' data-indicators="true")
@@ -9,15 +9,15 @@ div#discography.scrollspy.full-panel
 				div.players-container
 					div.audio-player-container
 						h1 Chapa Negra
-						img(class="cover" src="/images/discs/chapa_negra.png" alt="")
+						img(class="cover" src="/images/discs/chapa_negra_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/chapa_negra/chapa_negra.mp3" type="audio/mp3" controls="controls")
 					div.audio-player-container
 						h1 Hanami
-						img(class="cover" src="/images/discs/chapa_negra.png" alt="")
+						img(class="cover" src="/images/discs/chapa_negra_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/chapa_negra/hanami.mp3" type="audio/mp3" controls="controls")
 					div.audio-player-container
 						h1 Olimpiada de la mentira
-						img(class="cover" src="/images/discs/chapa_negra.png" alt="")
+						img(class="cover" src="/images/discs/chapa_negra_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/chapa_negra/olimpiada_de_la_mentira.mp3" type="audio/mp3" controls="controls")
 			div.col.m5.hide-on-small-and-medium.centered
 				img(class='responsive-img discography-image' src='/images/discs/chapa_negra.png')
@@ -26,16 +26,18 @@ div#discography.scrollspy.full-panel
 				div.players-container
 					div.audio-player-container
 						h1 La Familia
-						img(class="cover" src="/images/discs/notas_al_viento.png" alt="")
+						img(class="cover" src="/images/discs/notas_al_viento_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/notas_al_viento/la_familia.mp3" type="audio/mp3" controls="controls")
 					div.audio-player-container
 						h1 Mambo Spagueti
-						img(class="cover" src="/images/discs/notas_al_viento.png" alt="")
+						img(class="cover" src="/images/discs/notas_al_viento_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/notas_al_viento/mambo_spagueti.mp3" type="audio/mp3" controls="controls")
 					div.audio-player-container
 						h1 Mimi
-						img(class="cover" src="/images/discs/notas_al_viento.png" alt="")
+						img(class="cover" src="/images/discs/notas_al_viento_portada.jpg" alt="")
 						audio(class="audio-player" src="/sounds/notas_al_viento/mimi.mp3" type="audio/mp3" controls="controls")
 			div.col.m5.hide-on-small-only.centered
 				img(class='responsive-img discography-image' src='/images/discs/notas_al_viento.png')
+	a(class="waves-effect waves-light btn-flat go-home-btn hide-on-small-only" href='#header')
+		i.material-icons.medium home
 	link(rel='stylesheet' href='/stylesheets/components/audio-player.css')
