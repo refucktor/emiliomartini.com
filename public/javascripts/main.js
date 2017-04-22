@@ -4,31 +4,7 @@ $(function () {
 	hideAboutMe();
 	activateScrollFire();
 	activateSideNav();
-	setTimeout(function () {
-		iziToast.show({
-			color: 'dark',
-			title: '<b>International Day of Jazz</b>',
-			message: '<br>' +
-				'<b>Abril</b><br>' +
-				'Dia 27, Jam Session con grandes figuras internacionales.<br>' +
-				'Lugar: El Tablao, San Rafael y Prado.<br>' +
-				'<br>' +
-				'Dia 30, Concierto International Jazz Day.<br>' +
-				'Lugar: El Gran Teatro de La Habana.<br>' +
-				'Emilio Martini, Iván Lins, Marcus Miller, A Bu y Till Bronner etc.<br>' +
-				'<br>' +
-				'<b>Mayo</b><br>' +
-				'De 11 a 21, Cubadisco 2017.<br>' +
-				'Dia 11, Conferencia de Prensa del nuevo álbum: "Notas al viento".<br>' +
-				'Dia 14, Concierto presentado el álbum "Notas al viento", Casa del ALBA cultural.<br>' +
-				'<br>' +
-				'<b>Nos puede contactar para concierto privado, con mucho gusto le atenderemos.</b>',
-			image: '/images/assets/slogan-jazz-day-es.png',
-			timeout: 60000,
-			position: 'bottomCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
-			progressBarColor: 'rgb(0, 255, 184)',
-		});
-	}, 2000);
+	activateInfoPanel();
 });
 
 /**
@@ -87,4 +63,32 @@ function activateSideNav() {
 			closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
 		}
 	);
+}
+
+function activateInfoPanel() {
+	$('#news').on('click', function () {
+		iziToast.show({
+			color: 'dark',
+			title: '<b>News</b>',
+			message: '<br>' +
+			'<b>Abril</b><br>' +
+			'Dia 27, Jam Session con grandes figuras internacionales.<br>' +
+			'Lugar: El Tablao, San Rafael y Prado.<br>' +
+			'<br>' +
+			'Dia 30, Concierto International Jazz Day.<br>' +
+			'Lugar: El Gran Teatro de La Habana.<br>' +
+			'Emilio Martini, Iván Lins, Marcus Miller, A Bu y Till Bronner etc.<br>' +
+			'<br>' +
+			'<b>Mayo</b><br>' +
+			'De 11 a 21, Cubadisco 2017.<br>' +
+			'Dia 11, Conferencia de Prensa del nuevo álbum: "Notas al viento".<br>' +
+			'Dia 14, Concierto presentado el álbum "Notas al viento", Casa del ALBA cultural.<br>' +
+			'<br>' +
+			'<b>Nos puede contactar para concierto privado, con mucho gusto le atenderemos.</b>',
+			image: '/images/assets/slogan-jazz-day-es.png',
+			timeout: 60000,
+			position: 'bottomCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+			progressBarColor: 'rgb(0, 255, 184)',
+		});
+	})
 }

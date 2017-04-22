@@ -99,15 +99,55 @@ h6 {
 	min-width: 470px;
 }
 
-.about-me-link {
+.about-me-link,
+.info-news {
 	position: absolute;
 	bottom: 2em;
-	right: 1em;
 	font-size: 1.4em;
+}
+
+.about-me-link {
+	right: 1em;
+}
+
+.info-news {
+	left: 1em;
 }
 
 .about-me-link:hover {
 	background: none;
+}
+
+.iziToast {
+	max-width: 60vw !important;
+	max-height: 175px !important;
+	height: 175px !important;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, .4) !important;
+}
+
+.iziToast-cover {
+	width: 12vw !important;
+	background-position: 5px center !important;
+}
+
+.iziToast-body strong {
+	width: 100%;
+	font-size: 20px !important;
+	color: rgba(255, 255, 255, .9);
+}
+
+.iziToast-body {
+	margin-left: 13vw !important;
+	overflow: hidden;
+}
+
+.iziToast-body p {
+	overflow-y: scroll;
+	height: 135px;
+	color: rgba(255, 255, 255, .85);
+	font-size: 18px !important;
+	line-height: 19px !important;
 }
 
 /***** About Me ********************************************************/
@@ -153,23 +193,28 @@ h6 {
 	position: absolute;
 	top: 25%;
 	color: white;
+	height: 68vh;
+	overflow-y: scroll;
+	padding-right: 35px;
+	text-align: justify;
 }
 
 .about-me-content .firstContent {
 	margin-bottom: 20px;
 }
 
-.about-me-content h6 {
+.about-me-content p {
 	line-height: 30px;
 }
 
 @media (max-width: 768px) {
 	.about-me-content {
 		left: 10%;
-		max-width: 80%;
+		max-width: 87%;
+		height: 62vh;
 	}
 
-	.about-me-content h6 {
+	.about-me-content p {
 		font-size: 1.2rem;
 	}
 
@@ -191,26 +236,34 @@ h6 {
 		font-size: 1.24rem !important;
 	}
 
+	.about-me-link,
+	.info-news {
+		font-size: 1.24rem !important;
+	}
+	.iziToast{
+		max-width: 90vw !important;
+	}
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
 	.about-me-content {
 		left: 20%;
-		max-width: 70%;
+		max-width: 77%;
 	}
 
-	.about-me-content h6 {
+	.about-me-content p {
 		font-size: 1.2rem;
 	}
 }
 
 @media only screen and (min-width: 993px) {
 	.about-me-content {
-		left: 50%;
-		max-width: 45%;
+		left: 40%;
+		max-width: 57%;
 	}
 
-	.about-me-content h6 {
+	.about-me-content p {
 		font-size: 1.3rem;
 	}
 }
@@ -532,19 +585,39 @@ h6 {
 	z-index: 10;
 	color: white;
 }
+
 .button-collapse i.material-icons {
 	font-size: 30px;
 }
-.iziToast{
-	max-width: 60vw!important;
+
+::-webkit-scrollbar {
+	width: 0.5em;
+	height: 0.5em;
 }
-.iziToast-cover{
-	width: 15vw!important;
-	background-size: cover;
+
+::-webkit-scrollbar-thumb {
+	background: #9b9b9b;
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
+	cursor: pointer;
 }
-.iziToast-body strong{
-	width: 100%;
-}
-.iziToast-body {
-	margin-left: 16vw!important;
+
+::-webkit-scrollbar-track {
+	background: #4b4b4b;
+	background-image: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-size: initial;
+	background-repeat-x: initial;
+	background-repeat-y: initial;
+	background-attachment: initial;
+	background-origin: initial;
+	background-clip: initial;
 }
