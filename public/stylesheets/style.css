@@ -135,6 +135,7 @@ h6 {
 	width: 100%;
 	font-size: 20px !important;
 	color: rgba(255, 255, 255, .9);
+	padding-right: 8px;
 }
 
 .iziToast-body {
@@ -240,7 +241,8 @@ h6 {
 	.info-news {
 		font-size: 1.24rem !important;
 	}
-	.iziToast{
+
+	.iziToast {
 		max-width: 90vw !important;
 	}
 
@@ -555,7 +557,22 @@ h6 {
 	color: rgba(250, 250, 250, .9);
 }
 
-.social-icons-container {
+.social-icons-container-right-vertical {
+	position: absolute;
+	padding: 5px 0;
+	width: 55px;
+	left: 10px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.social-icons-container-right-vertical .social-icons {
+	display: block;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.social-icons-container-bottom {
 	position: absolute;
 	width: 100%;
 	height: 65px;
@@ -564,11 +581,14 @@ h6 {
 	padding: 5px 0;
 }
 
-.social-icons {
-	width: 80px;
-	height: 100%;
-	border-radius: 50%;
+.social-icons-container-bottom .social-icons {
 	display: inline-block;
+	height: 100%;
+	width: 80px;
+}
+
+.social-icons {
+	border-radius: 50%;
 }
 
 .social-icons img {

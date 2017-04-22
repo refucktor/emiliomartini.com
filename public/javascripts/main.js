@@ -86,7 +86,7 @@ function activateInfoPanel() {
 			'<br>' +
 			'<b>Nos puede contactar para concierto privado, con mucho gusto le atenderemos.</b>',
 			image: '/images/assets/slogan-jazz-day-es.png',
-			timeout: 60000,
+			timeout: 30000,
 			position: 'bottomCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
 			progressBarColor: 'rgb(0, 255, 184)',
 			onOpen: function(){
