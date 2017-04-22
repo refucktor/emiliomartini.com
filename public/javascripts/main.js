@@ -89,6 +89,12 @@ function activateInfoPanel() {
 			timeout: 60000,
 			position: 'bottomCenter', // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
 			progressBarColor: 'rgb(0, 255, 184)',
+			onOpen: function(){
+				$('#news').toggleClass('disabled');
+			},
+			onClose: function(){
+				$('#news').toggleClass('disabled');
+			}
 		});
 	})
 }
